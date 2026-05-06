@@ -7,25 +7,18 @@
             <a pRipple class="nav-item">
                 <i [class]="item.icon" class="nav-icon"></i>
                 <span class="nav-label">{{ item.label }}</span>
-                <!-- Badge per notifiche/novità -->
-                <p-badge *ngIf="item.badge" [value]="item.badge" severity="danger" [ngClass]="{ 'ml-auto': !root }"></p-badge>
-                <!-- Icona freccia per sottomenu -->
-                <i *ngIf="item.items" [ngClass]="['pi', root ? 'pi-angle-down' : 'pi-angle-right']" class="submenu-arrow"></i>
+                <p-badge *ngIf="item.badge" [value]="item.badge" severity="danger"></p-badge>
+                <i *ngIf="item.items" [ngClass]="['pi', root ? 'pi-angle-down' : 'pi-angle-right']" class="arrow"></i>
             </a>
         </ng-template>
 
         <!-- SEZIONE FINALE -->
         <ng-template #end>
             <div class="nav-end">
-                
-
-                <!-- Icona Notifiche -->
-                <button class="icon-only-btn">
-                    <i class="pi pi-bell" pBadge value="3" severity="danger"></i>
+                <button class="icon-only-btn notification-btn">
+                    <i class="pi pi-bell" pBadge value="3"></i>
                 </button>
-
-                <!-- Avatar Utente -->
-                <p-avatar image="/" shape="circle" class="user-avatar" size="large"></p-avatar>
+                <i class="pi pi-user user-icon"></i>
             </div>
         </ng-template>
     </p-menubar>
