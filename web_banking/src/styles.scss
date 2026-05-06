@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --p-primary-color: #1C2A5A; /* Il tuo blu bancario */
+    --p-primary-contrast-color: #ffffff;
+    --p-menubar-background: #f8f9fa;
+    --p-menubar-border-radius: 12px; /* Angoli più arrotondati per un look moderno */
+}
+:host ::ng-deep .p-badge {
+    background-color: #ef4444; /* Rosso acceso per le notifiche */
+    font-weight: bold;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
