@@ -6,6 +6,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { RippleModule } from 'primeng/ripple';
 import { MenuItem } from 'primeng/api';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-navbar-home',
@@ -16,7 +17,8 @@ import { MenuItem } from 'primeng/api';
         BadgeModule, 
         MenubarModule, 
         InputTextModule, 
-        RippleModule
+        RippleModule,
+        RouterLink
     ],
     templateUrl: './navbar-home.html',
     styleUrls: ['./navbar-home.scss']
@@ -27,34 +29,36 @@ export class NavbarHome implements OnInit {
     ngOnInit() {
     this.items = [
         {
-            label: 'Dashboard',
-            icon: 'pi pi-home'
+            label: 'Home',
+            icon: 'pi pi-home',
+            routerLink: '/' // Rotta per la Home
         },
         {
             label: 'Conti e Carte',
             icon: 'pi pi-credit-card',
             items: [
-                { label: 'Saldo e Movimenti', icon: 'pi pi-list' },
-                { label: 'Le mie Carte', icon: 'pi pi-id-card' },
+                { label: 'Saldo e Movimenti', icon: 'pi pi-list', routerLink: '/conto/movimenti' },
                 { separator: true },
-                { label: 'Gestione Limiti', icon: 'pi pi-sliders-h' }
-            ]
+                { label: 'Gestione Limiti', icon: 'pi pi-sliders-h', routerLink: '/conto/limiti' }
+            ],
         },
         {
             label: 'Pagamenti',
             icon: 'pi pi-money-bill',
             badge: 'New',
             items: [
-                { label: 'Bonifico', icon: 'pi pi-send' },
-                { label: 'F24 e Bollettini', icon: 'pi pi-file-pdf' },
-                { label: 'Ricarica Telefonica', icon: 'pi pi-mobile' }
+                { label: 'Bonifico', icon: 'pi pi-send', routerLink: '/pagamenti/bonifico' },
+                { label: 'F24 e Bollettini', icon: 'pi pi-file-pdf', routerLink: '/pagamenti/bollettini' },
+                { label: 'Ricarica Telefonica', icon: 'pi pi-mobile', routerLink: '/pagamenti/ricarica' }
             ]
         },
         {
-            label: 'Investimenti',
-            icon: 'pi pi-chart-line'
+            label: 'Crypto',
+            icon: 'pi pi-chart-line',
+            routerLink: '/crypto'
         }
     ];
 }
+
 
 }

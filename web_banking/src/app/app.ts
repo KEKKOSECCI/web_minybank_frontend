@@ -5,7 +5,7 @@ import { NavbarHome } from './components/navbar-home/navbar-home';
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarHome],
+  imports: [NavbarHome,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

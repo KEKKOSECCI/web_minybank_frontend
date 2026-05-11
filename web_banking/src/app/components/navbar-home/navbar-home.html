@@ -1,15 +1,17 @@
 <div class="navbar-wrapper">
     <p-menubar [model]="items" class="main-menubar">
-        
+
 
         <!-- SEZIONE VOCI MENU -->
         <ng-template #item let-item let-root="root">
-            <a pRipple class="nav-item">
+            <!-- Cambia questa riga -->
+            <a [routerLink]="item.routerLink" pRipple class="nav-item">
                 <i [class]="item.icon" class="nav-icon"></i>
                 <span class="nav-label">{{ item.label }}</span>
                 <p-badge *ngIf="item.badge" [value]="item.badge" severity="danger"></p-badge>
                 <i *ngIf="item.items" [ngClass]="['pi', root ? 'pi-angle-down' : 'pi-angle-right']" class="arrow"></i>
             </a>
+
         </ng-template>
 
         <!-- SEZIONE FINALE -->
