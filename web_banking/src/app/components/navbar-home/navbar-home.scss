@@ -1,13 +1,18 @@
 /* --- 1. SETTAGGI GENERALI E ALTEZZA RIDOTTA --- */
-.navbar-wrapper {
-    padding: 0.3rem 0.5rem;
-    position: sticky;
-    top: 0;
+:host {
+    display: block;      /* Importante per rendere effettivo il width */
+    position: fixed;
+    top: 1%;
     z-index: 1000;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 1%;
+    
+    width: 40%;
+    /* Calcolo: 50% (centro) - 20% (metà della larghezza) */
+    left: calc(50% - 20%);
+    
+    padding: 0.3rem 0.5rem;
 }
+
+
 
 :host ::ng-deep .p-menubar {
     padding: 0.2rem 0.8rem !important; /* Navbar molto sottile */

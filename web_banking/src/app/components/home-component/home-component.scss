@@ -1,0 +1,441 @@
+.home-page {
+min-height: 100vh;
+
+color: #07143d;
+background: #f8f9ff;
+}
+
+/* HERO */
+
+.hero {
+position: relative;
+overflow: hidden;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 3rem;
+
+min-height: 520px;
+padding: 2rem 3rem;
+
+background:
+
+url('./citta.jpg');
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+
+
+
+}
+
+
+.hero-content,
+.hero-card {
+position: relative;
+z-index: 2;
+}
+
+.hero-content {
+max-width: 560px;
+}
+
+.welcome {
+margin: 0;
+font-size: clamp(2.8rem, 6vw, 5rem);
+font-weight: 800;
+letter-spacing: -0.04em;
+}
+
+.subtitle {
+margin-top: 1rem;
+font-size: 1.25rem;
+color: #435071;
+}
+
+.balance-box {
+margin-top: 2.5rem;
+}
+
+.balance-label {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-weight: 700;
+}
+
+.balance-box h1 {
+margin: 0.6rem 0;
+font-size: clamp(3rem, 6vw, 4.8rem);
+line-height: 1;
+letter-spacing: -0.05em;
+}
+
+.growth {
+display: flex;
+align-items: center;
+gap: 0.25rem;
+margin: 0;
+color: #24b72e;
+font-weight: 700;
+
+span {
+color: #44506d;
+font-weight: 400;
+}
+}
+
+.primary-btn {
+margin-top: 2.2rem;
+padding: 1rem 1.5rem;
+border: none;
+border-radius: 12px;
+background: linear-gradient(135deg, #4036d3, #2b21b8);
+color: white;
+font-size: 1rem;
+font-weight: 700;
+cursor: pointer;
+
+display: inline-flex;
+align-items: center;
+gap: 1rem;
+
+box-shadow: 0 12px 28px rgba(45, 35, 184, 0.25);
+transition: all 0.2s ease;
+
+&:hover {
+transform: translateY(-3px);
+box-shadow: 0 16px 32px rgba(45, 35, 184, 0.35);
+}
+}
+
+/* CARTA */
+
+.hero-card {
+flex: 1;
+display: flex;
+justify-content: center;
+}
+
+.bank-card {
+width: min(420px, 100%);
+aspect-ratio: 1.65;
+padding: 2rem;
+border-radius: 22px;
+color: white;
+
+background: linear-gradient(135deg, #4e43de, #b79be8);
+box-shadow: 0 35px 70px rgba(30, 27, 90, 0.28);
+
+transform: rotate(3deg);
+position: relative;
+}
+
+.card-top {
+display: flex;
+align-items: center;
+gap: 0.7rem;
+font-weight: 800;
+}
+
+.logo {
+font-size: 1.6rem;
+font-weight: 900;
+}
+
+.chip {
+width: 48px;
+height: 36px;
+margin-top: 2.2rem;
+border-radius: 8px;
+background: linear-gradient(135deg, #f7d779, #d7a83f);
+}
+
+.card-number {
+margin-top: 1.6rem;
+font-size: 1.2rem;
+letter-spacing: 0.18em;
+}
+
+.card-brand {
+position: absolute;
+right: 2rem;
+bottom: 1.5rem;
+font-size: 2rem;
+font-weight: 900;
+font-style: italic;
+}
+
+/* DASHBOARD */
+
+.dashboard-grid {
+display: grid;
+grid-template-columns: 1fr 1.05fr 0.9fr;
+gap: 1.5rem;
+padding: 0 5rem;
+}
+
+.panel {
+padding: 1.8rem;
+border-radius: 22px;
+background: rgba(255, 255, 255, 0.86);
+backdrop-filter: blur(12px);
+box-shadow: 0 18px 45px rgba(18, 24, 60, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.panel-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 1.3rem;
+
+h3 {
+margin: 0;
+font-size: 1.25rem;
+}
+
+a {
+color: #2f24c9;
+font-weight: 600;
+font-size: 0.9rem;
+cursor: pointer;
+text-decoration: none;
+}
+}
+
+/* CONTI / MOVIMENTI */
+
+.account-item,
+.transaction-item {
+display: flex;
+align-items: center;
+gap: 1rem;
+padding: 1rem;
+border-radius: 16px;
+transition: all 0.2s ease;
+
+&:hover {
+background: rgba(67, 54, 211, 0.05);
+}
+}
+
+.account-icon,
+.transaction-icon {
+width: 46px;
+height: 46px;
+border-radius: 13px;
+color: white;
+display: grid;
+place-items: center;
+flex-shrink: 0;
+font-weight: 800;
+}
+
+.account-info,
+.transaction-info {
+display: flex;
+flex-direction: column;
+gap: 0.25rem;
+flex: 1;
+
+span {
+color: #59637d;
+font-size: 0.9rem;
+}
+}
+
+.account-balance {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+font-weight: 800;
+}
+
+.transaction-item {
+padding-inline: 0.4rem;
+}
+
+.transaction-item strong:last-child {
+white-space: nowrap;
+}
+
+.positive {
+color: #22b857;
+}
+
+/* AZIONI RAPIDE */
+
+.quick-actions {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 0.9rem;
+
+button {
+min-height: 92px;
+border: none;
+border-radius: 14px;
+background: rgba(80, 65, 210, 0.07);
+color: #080f47;
+font-weight: 700;
+cursor: pointer;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 0.7rem;
+
+transition: all 0.2s ease;
+
+i {
+font-size: 1.7rem;
+color: #2f24c9;
+}
+
+&:hover {
+background: rgba(80, 65, 210, 0.13);
+transform: translateY(-3px);
+}
+}
+}
+
+.security-box {
+margin-top: 1.5rem;
+padding: 1rem;
+border-radius: 14px;
+background: rgba(80, 65, 210, 0.09);
+
+display: flex;
+align-items: center;
+gap: 0.8rem;
+
+i {
+color: #2f24c9;
+font-size: 1.4rem;
+}
+
+div {
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 0.25rem;
+}
+
+span {
+font-size: 0.85rem;
+color: #2f24c9;
+}
+}
+
+/* COLORI ICONE */
+
+.purple {
+background: linear-gradient(135deg, #7657f0, #4e35d7);
+}
+
+.blue {
+background: linear-gradient(135deg, #47b6ec, #2f8ccf);
+}
+
+.black {
+background: linear-gradient(135deg, #1e1e23, #050509);
+}
+
+.green {
+background: linear-gradient(135deg, #45d47b, #1cad54);
+}
+
+.orange {
+background: linear-gradient(135deg, #f8a13a, #ed7c18);
+}
+
+.indigo {
+background: linear-gradient(135deg, #6157f3, #3125c7);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+.dashboard-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.dashboard-grid .panel:last-child {
+grid-column: span 2;
+}
+}
+
+@media (max-width: 850px) {
+.home-page {
+padding: 6rem 1rem 2rem;
+}
+
+.hero {
+flex-direction: column;
+align-items: flex-start;
+padding: 2rem 1.5rem;
+min-height: auto;
+
+&::before {
+background:
+linear-gradient(
+to bottom,
+rgba(248, 249, 255, 0.96) 0%,
+rgba(248, 249, 255, 0.82) 45%,
+rgba(248, 249, 255, 0.95) 100%
+),
+url('/assets/images/city-bg.png');
+
+background-size: cover;
+background-position: center;
+}
+}
+
+.hero-card {
+width: 100%;
+}
+
+.bank-card {
+transform: none;
+}
+
+.dashboard-grid {
+grid-template-columns: 1fr;
+}
+
+.dashboard-grid .panel:last-child {
+grid-column: auto;
+}
+}
+
+@media (max-width: 520px) {
+.welcome {
+font-size: 2.7rem;
+}
+
+.subtitle {
+font-size: 1rem;
+}
+
+.panel {
+padding: 1.2rem;
+}
+
+.account-item,
+.transaction-item {
+padding: 0.8rem 0.2rem;
+}
+
+.quick-actions {
+grid-template-columns: 1fr;
+}
+
+.account-balance,
+.transaction-item strong:last-child {
+font-size: 0.9rem;
+}
+}
